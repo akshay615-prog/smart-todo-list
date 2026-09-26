@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My smart to do Lists</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       <header>
+    <h1>My smart to do Lists</h1>
+
+    <p>Manage your daily tasks efficiently.</p>
+
+    <button id="themeToggle" type="button">
+        ☀️ Light Mode
+    </button>
+</header>
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+    Visit GitHub
+</a>
+       <br><br>
+       <div class="github-card">
+    <div class="github-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48
+            0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47
+            -.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83
+            .09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94
+            0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65
+            0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.84
+            c.85 0 1.7.11 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02
+            .55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68
+            0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85
+            0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12
+            C22 6.48 17.52 2 12 2Z"/>
+        </svg>
+    </div>
+
+    <div class="github-content">
+        <h3>My GitHub</h3>
+        <p>Explore my coding journey and projects.</p>
+
+        <a href="https://github.com/akshay615-prog/coding-practice"
+           target="_blank"
+           rel="noopener noreferrer">
+            View Repository →
+        </a>
+    </div>
+</div>
+       <main>
+        <section>
+            <h2>Add task</h2>
+            <form id="taskForm">
+                <label for="taskName">Task name:</label>
+                <input type="text" id="taskName" name="taskName" required>
+                <label for="dueDate">Due date:</label>
+                <input type="date" id="dueDate" name="dueDate" required>
+                <label for="priority">Priority:</label>
+                <select id="priority" name="priority" required>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+       <section class="task-list-section">
+
+    <h3>Task List</h3>
+
+    <!-- Search and Filter Toolbar -->
+    <div class="task-toolbar">
+
+        <div class="search-box">
+            <label for="searchTask">Search Tasks</label>
+
+            <input
+                type="text"
+                id="searchTask"
+                placeholder="Search tasks..."
+            >
+        </div>
+
+        <div class="filter-box">
+            <label for="filterPriority">Priority</label>
+
+            <select id="filterPriority">
+                <option value="all">All Priorities</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+        </div>
+
+    </div>
+
+    <!-- Task Table -->
+    <table>
+
+        <thead>
+            <tr>
+               <th>Task Name</th>
+                <th>Due Date</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Completed</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="taskList">
+        </tbody>
+
+    </table>
+
+</section>
+        <section class="task-counter">
+    <h2>Task Overview</h2>
+
+    <div class="counter-grid">
+
+        <div class="counter-card total-card">
+            <h3>Total Tasks</h3>
+            <p id="totalTasks">0</p>
+            <span>All your tasks</span>
+        </div>
+
+        <div class="counter-card completed-card">
+            <h3>Completed</h3>
+            <p id="completedTasks">0</p>
+            <span>Tasks finished</span>
+        </div>
+
+        <div class="counter-card pending-card">
+            <h3>Pending</h3>
+            <p id="pendingTasks">0</p>
+            <span>Tasks remaining</span>
+        </div>
+
+    </div>
+</section>
+       </main>
+        <footer>
+            <p>My Smart to do app</p>
+        </footer> 
+        <script src="script.js"></script>
+    </body>
+</html>
