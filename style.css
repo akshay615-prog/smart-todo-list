@@ -939,3 +939,91 @@ input:-webkit-autofill:focus {
     background: rgba(239, 68, 68, 0.12);
     border: 1px solid rgba(239, 68, 68, 0.4);
 }
+
+/* =================================
+   FINAL LIGHT MODE FIX
+================================= */
+
+/* Task table */
+body.light-mode table {
+    background: #ffffff !important;
+    border-color: #d1d5db;
+}
+
+/* Table header */
+body.light-mode th {
+    background: #e5e7eb !important;
+    color: #1f2937 !important;
+}
+
+/* Task rows */
+body.light-mode #taskList tr {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+}
+
+/* Task row hover */
+body.light-mode #taskList tr:hover {
+    background: #f1effb !important;
+}
+
+/* Table cells */
+body.light-mode #taskList td {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    border-color: #d1d5db !important;
+}
+
+/* Due date */
+body.light-mode #taskList td:nth-child(2) {
+    color: #374151 !important;
+}
+
+/* Completed task */
+body.light-mode #taskList tr.completed-task {
+    background: #ecfdf5 !important;
+}
+
+body.light-mode #taskList tr.completed-task td {
+    background: #ecfdf5 !important;
+    color: #6b7280 !important;
+}
+
+/* Search and filter */
+body.light-mode #searchTask,
+body.light-mode #filterPriority {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    border-color: #cbd5e1 !important;
+}
+
+/* Counter numbers */
+body.light-mode .counter-card p {
+    color: #1f2937 !important;
+}
+
+/* Counter card text */
+body.light-mode .counter-card h3 {
+    color: #374151 !important;
+}
+
+body.light-mode .counter-card span {
+    color: #6b7280 !important;
+}
+
+/* Delete button */
+body.light-mode #taskList button {
+    background: #ffffff !important;
+    color: #e11d48 !important;
+    border-color: #fda4af !important;
+}
+
+body.light-mode #taskList button:hover {
+    background: #ffe4e6 !important;
+    color: #be123c !important;
+}
+
+/* Date input */
+body.light-mode input[type="date"] {
+    color-scheme: light;
+}
